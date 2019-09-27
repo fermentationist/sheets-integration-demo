@@ -4,13 +4,19 @@
 ºººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººº
  -->
 <script>
-    import Image from "./Image.svelte";
-    export let brand = "brand";
-    export let category = "category";
-    export let id = null;
-    export let name = "name";
-    export let imageUrl = null;
-    
+    import Item from "./Item.svelte";
+    const getItemData = () => {
+        return ({
+            state: { 
+                brand: "Jeppson",
+                name: "Rotgut",
+                abv: 40,
+                description: "a brief description. a brief description. a brief description. a brief description. \n a brief description. a brief description. a brief description. a brief description. \n a brief description. a brief description. a brief description. a brief description.",
+                size: 750,
+                price: 99.99,
+            }
+        });
+    }
 </script>
 
 
@@ -81,13 +87,9 @@
     Component Markup (HTML template)
 ºººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººº
  -->
- <!-- example markup, okay to delete -->
 <div class="main-grid">
-    <Image imageUrl={imageUrl || "https://www.bfspirits.com/images/             04f72856e6deca7ebb2ef978a94403f2"} />
-    <main class="text-grid">
-
-    </main>
+    <Item data={itemData}/>
     
 </div><!--.main-grid-->-->   
 
-    
+    state
