@@ -13,9 +13,9 @@
         abv: 0,
         description: "description",
         size: 0,
-        price: 0,
+        price: 0
     }
-
+    $: proof = state.abv * 2;
 </script>
 
 <!--
@@ -33,13 +33,12 @@
         color: darkslateblue;/*rgb(185, 160, 185);*/
         font-family: Lato, sans-serif;
         font-size: 1.5em;
-        letter-spacing: 0.25em;
         line-height: 2em;
     }
-    .text-grid {
+    main.text-grid {
         display: grid;
         max-height: 200px;
-        grid-template-rows: repeat(3, 1fr) 2fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 6fr 2fr 2fr;
     }
     p {
         max-width: 50vw;
@@ -65,10 +64,10 @@
     <main class="text-grid" key={state.name}>
         <p class="brand"><a href={state.website}>{state.brand}</a></p>
         <p class="name">{state.name}</p>
-        <p class="abv">{state.abv}</p>
+        <p class="abv">{state.abv}%ABV {proof} proof</p>
         <p class="description">{state.description}</p>
-        <p class="size">{state.size}</p>
-        <p class="price">{state.price}</p>
+        <p class="size">{state.size}ml</p>
+        <p class="price">${state.price}</p>
     </main>
 </div><!--.main-grid-->-->   
 

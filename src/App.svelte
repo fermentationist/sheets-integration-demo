@@ -38,9 +38,11 @@
     }
     :global(*, *:before, *:after) {
 		box-sizing: inherit;
+        margin: 0;
+        padding: 0;
 	}
 	:global(a) {
-		text-decoration: none;
+		/* text-decoration: none; */
 		color: inherit;
     }
     .main-container {
