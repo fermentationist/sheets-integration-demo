@@ -27,18 +27,19 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1.615fr;
-        background: rgb(243, 238, 238);
-        width: 50vw;
-        max-height: 100vh;
-        color: darkslateblue;/*rgb(185, 160, 185);*/
+        background-color: rgba(0, 238, 0, 0.5);
+        grid-template-rows: repeat(3, 1fr) 4fr repeat(3, 1fr);
+
+        color: darkslateblue;
         font-family: Lato, sans-serif;
         font-size: 1.5em;
         line-height: 2em;
     }
-    main.text-grid {
+    div.text-grid {
         display: grid;
         max-height: 200px;
-        grid-template-rows: 1fr 2fr 2fr 6fr 2fr 2fr;
+        grid-template-rows: auto;
+        background-color: rgba(255,0,0,0.5)
     }
     p {
         max-width: 50vw;
@@ -49,7 +50,11 @@
     .italic {
         font-style: italic;
     }
-    /*∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+    :global(img.image) {
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    /*∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
 </style>
 
 
@@ -60,15 +65,14 @@
  -->
  <!-- example markup, okay to delete -->
 <div class="main-grid">
-    <Image imageUrl={state.imageUrl} />
-    <main class="text-grid" key={state.name}>
+    <Image className="product" style="display:none;" height="74vh" imageUrl={state.imageUrl} />
         <p class="brand"><a href={state.website}>{state.brand}</a></p>
         <p class="name">{state.name}</p>
         <p class="abv">{state.abv}%ABV {proof} proof</p>
         <p class="description">{state.description}</p>
         <p class="size">{state.size}ml</p>
         <p class="price">${state.price}</p>
-    </main>
-</div><!--.main-grid-->-->   
+ 
+</div><!--.main-grid-->
 
     

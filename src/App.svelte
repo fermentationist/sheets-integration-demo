@@ -42,11 +42,12 @@
         padding: 0;
 	}
 	:global(a) {
-		/* text-decoration: none; */
+		text-decoration: none;
 		color: inherit;
     }
     .main-container {
         position: absolute;
+        justify-items: center;
     }
 </style>
 
@@ -59,6 +60,4 @@
 <div class="main-container">
     <Item state={getItemData}/>
     
-</div><!--.main-grid-->-->   
-
-    state
+</div><!--.main-grid-->
