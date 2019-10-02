@@ -2,9 +2,9 @@
   "name": "sheets-integration-demo",
   "version": "0.0.1",
   "description": "a Svelte app with Google Sheets integration",
-  "main": "dist/main.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon dist/main.js",
+    "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\"",
     "build": "webpack",
     "dev": "npm test && webpack && webpack-dev-server --open"
