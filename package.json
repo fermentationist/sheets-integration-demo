@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\"",
-    "build": "webpack",
+    "build": "npm run webpack",
     "dev": "npm test && webpack && webpack-dev-server --open"
   },
   "author": "fermentationist",
