@@ -14,10 +14,13 @@ app.use(bodyParser.json());
 
 // routes
 app.use(express.static("public"));
-app.get("/*", (req, res) => {
+app.get("/api", (req, res) => {
     fetchSheet(googleSheetId, data => {
         res.status(200).json(JSON.stringify(data));
     });
+});
+app.get("/", (req, res) => {
+    res.status(200).sendFile("./dist/index.html");
 });
 
 // module.exports = app;
