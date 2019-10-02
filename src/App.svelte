@@ -10,14 +10,9 @@
     let itemList, otherPromise;// will hold a Promise to return array of products imported from Google Sheet API
 
     beforeUpdate(() => {// Svelte lifecycle event that runs before mounting component
-        otherPromise = getSheetData();
-        console.log("TCL: itemList", itemList)
+        otherPromise = itemList = getSheetData();
     }); 
 
-    afterUpdate(()=> {
-        itemList = otherPromise;
-        console.log("TCL: itemList", itemList)
-    })
     const getSheetData = async () => {// returns a Promise
         const data = await fetch("/api");
         let [headings, ...list] = JSON.parse(await data.json());
@@ -26,9 +21,8 @@
             headings.forEach((heading, i) => {
                 newObj[heading] = item[i];
             });
-            return newObj
+            return newObj;
         })
-        console.log("TCL: convertedList", convertedList)
         return convertedList;
     }
 </script>
@@ -42,6 +36,10 @@
     /*∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
     /* Some useful global styles (you may want to keep or add to) */
     /*∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+    @font-face {
+        font-family: "Raleway";
+        src: url("../srcFonts/Raleway-Light.ttf");
+    }
 	:global(body) { /* syntax to apply global styles in Svelte */
 		box-sizing: border-box;
 		scroll-behavior: smooth;
@@ -51,19 +49,18 @@
 		text-rendering: optimizeLegibility;
         width: 100%;
         height: 100%;
+        font-family: "Raleway";
     }
     :global(*, *:before, *:after) {
 		box-sizing: inherit;
         margin: 0;
         padding: 0;
 	}
-	:global(a) {
-		text-decoration: none;
-		color: inherit;
-    }
     .main-container {
-        position: absolute;
-        justify-items: center;
+        min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
 

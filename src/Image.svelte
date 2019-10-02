@@ -9,7 +9,7 @@
     img {
         border: none;
         display: block;
-        height: height
+        height: height;
     }
 </style>
 
