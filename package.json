@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "fs": "0.0.1-security",
     "googleapis": "^43.0.0",
     "handled": "^1.2.2",
