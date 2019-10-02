@@ -5,7 +5,7 @@
  -->
 <script>
     import Image from "./Image.svelte";
-    export let state = {
+    export let item = {
         imageUrl: "url",
         brand: "brand",
         website: "url",
@@ -15,7 +15,8 @@
         size: 0,
         price: 0
     }
-    $: proof = state.abv * 2;
+    $: proof = item.abv * 2;
+
 </script>
 
 <!--
@@ -63,15 +64,14 @@
     Component Markup (HTML template)
 ºººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººº
  -->
- <!-- example markup, okay to delete -->
 <div class="main-grid">
-    <Image className="product" style="display:none;" height="74vh" imageUrl={state.imageUrl} />
-        <p class="brand"><a href={state.website}>{state.brand}</a></p>
-        <p class="name">{state.name}</p>
-        <p class="abv">{state.abv}%ABV {proof} proof</p>
-        <p class="description">{state.description}</p>
-        <p class="size">{state.size}ml</p>
-        <p class="price">${state.price}</p>
+    <Image className="product" style="display:none;" height="74vh" imageUrl={item.imageUrl} />
+        <p class="brand"><a href={item.website}>{item.brand}</a></p>
+        <p class="name">{item.name}</p>
+        <p class="abv">{item.abv}%ABV {proof} proof</p>
+        <p class="description">{item.description}</p>
+        <p class="size">{item.size}ml</p>
+        <p class="price">${item.price}</p>
  
 </div><!--.main-grid-->
 

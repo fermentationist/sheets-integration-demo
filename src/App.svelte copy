@@ -5,22 +5,16 @@
  -->
 <script>
     import Item from "./Item.svelte";
-    import {beforeUpdate, afterUpdate, onMount} from "svelte";
+    import {beforeUpdate, onMount} from "svelte";
 
-    let itemList, otherPromise;// will hold a Promise to return array of products imported from Google Sheet API
-
-    beforeUpdate(() => {// Svelte lifecycle event that runs before mounting component
-        otherPromise = getSheetData();
-        console.log("TCL: itemList", itemList)
+    let itemList;// will hold a Promise to return array of products imported from Google Sheet API
+    beforeUpdate(async () => {// Svelte lifecycle event that runs before mounting component
+        itemList = convertToJSONObject(await getSheetData());
+        console.log("TCL: itemList", itemList);
     }); 
 
-    afterUpdate(()=> {
-        itemList = otherPromise;
-        console.log("TCL: itemList", itemList)
-    })
-    const getSheetData = async () => {// returns a Promise
-        const data = await fetch("/api");
-        let [headings, ...list] = JSON.parse(await data.json());
+    const convertToJSONObject = data => {
+        let [headings, ...list] = JSON.parse(data);
         const convertedList = list.map(item => {
             const newObj = {};
             headings.forEach((heading, i) => {
@@ -31,6 +25,12 @@
         console.log("TCL: convertedList", convertedList)
         return convertedList;
     }
+
+    const getSheetData = async () => {// returns a Promise
+        const sheetData = await fetch("/api");
+        return await sheetData.json();
+    }
+
 </script>
 
 <!-- 
@@ -74,10 +74,15 @@
 ºººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººº
  -->
 <div class="main-container">
-    {#await otherPromise}
+    {#await itemList}
         {:then itemList}
-        {#each itemList as item}
-            <Item key={item.id} {item}/>
-        {/each}
+        
+            {#each itemList as item (item.id)}
+            {console.log("*",itemList)}
+                <Item key={item.id} item={{...item}}/>
+            {/each}
+        {:catch error}
+            <p style="color: red">{error.message}</p>
     {/await}
+
 </div><!--.main-grid-->
