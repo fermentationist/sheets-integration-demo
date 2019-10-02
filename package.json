@@ -4,7 +4,7 @@
   "description": "a Svelte app starter template",
   "main": "/src/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack && node server.js",
     "server": "source .env && nodemon server.js",
     "test": "echo \"Error: no test specified\"",
     "build": "webpack",
