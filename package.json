@@ -7,7 +7,8 @@
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\"",
     "build": "npm run webpack",
-    "dev": "npm test && webpack && webpack-dev-server --open"
+    "dev": "npm test && webpack && webpack-dev-server --open",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "author": "fermentationist",
   "license": "MIT",
