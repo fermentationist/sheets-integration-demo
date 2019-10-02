@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const fetchSheet = require("../sheets.js");
+const fetchSheet = require("./sheets.js");
 const googleSheetId = "1r04j0ghIXlbJAw2awi6Bao5vEXibGOMNzA1xR2wdONA";
 
 router.get("/*", (req, res) => {

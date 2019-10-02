@@ -1743,7 +1743,7 @@ function create_catch_block(ctx) {
 	};
 }
 
-// (78:8) {:then itemList}
+// (75:8) {:then itemList}
 function create_then_block(ctx) {
 	var each_1_anchor, current;
 
@@ -1832,7 +1832,7 @@ function create_then_block(ctx) {
 	};
 }
 
-// (79:8) {#each itemList as item}
+// (76:8) {#each itemList as item}
 function create_each_block(ctx) {
 	var current;
 
@@ -1875,7 +1875,7 @@ function create_each_block(ctx) {
 	};
 }
 
-// (77:25)          {:then itemList}
+// (74:25)          {:then itemList}
 function create_pending_block(ctx) {
 	return {
 		c: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
@@ -1909,7 +1909,7 @@ function create_fragment(ctx) {
 			div = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 
 			info.block.c();
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "main-container svelte-nemb62");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "main-container svelte-19mgfr1");
 		},
 
 		m(target, anchor) {
@@ -2119,12 +2119,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function create_fragment(ctx) {
-	var section, t0, p0, a, h2, t1_value = ctx.item.brand + "", t1, a_href_value, t2, p1, t3_value = ctx.item.name + "", t3, t4, p2, t5_value = ctx.item.abv + "", t5, t6, t7, t8, t9, hr0, t10, p3, t11_value = ctx.item.description + "", t11, t12, hr1, t13, p4, t14_value = ctx.item.size + "", t14, t15, t16, p5, t17, t18_value = ctx.item.price + "", t18, current;
+	var section, t0, a, h2, t1_value = ctx.item.brand + "", t1, a_href_value, t2, h1, t3_value = ctx.item.name + "", t3, t4, p0, t5_value = ctx.item.abv + "", t5, t6, t7, t8, t9, hr0, t10, div, t11_value = ctx.item.description + "", t11, t12, hr1, t13, p1, t14, t15_value = ctx.item.size + "", t15, t16, t17, p2, t18, t19_value = ctx.item.price + "", t19, current;
 
 	var image = new _Image_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
 		props: {
 		className: "product",
-		style: "display:none;",
 		height: "74vh",
 		imageUrl: ctx.item.imageUrl
 	}
@@ -2135,15 +2134,14 @@ function create_fragment(ctx) {
 			section = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("section");
 			image.$$.fragment.c();
 			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
 			a = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
 			h2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("h2");
 			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t1_value);
 			t2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			h1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("h1");
 			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t3_value);
 			t4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			p0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
 			t5 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t5_value);
 			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("%ABV ");
 			t7 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(ctx.proof);
@@ -2151,63 +2149,64 @@ function create_fragment(ctx) {
 			t9 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			hr0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("hr");
 			t10 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			div = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 			t11 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t11_value);
 			t12 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			hr1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("hr");
 			t13 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			t14 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t14_value);
-			t15 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("ml");
-			t16 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			p5 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			t17 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("$");
-			t18 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t18_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(h2, "class", "svelte-1ab9iua");
+			p1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			t14 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Size: ");
+			t15 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t15_value);
+			t16 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("ml");
+			t17 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			p2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			t18 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Price: $");
+			t19 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t19_value);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(h2, "class", "svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "brand svelte-1p0ic3t");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = ctx.item.website);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p0, "class", "brand svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p1, "class", "name svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p2, "class", "abv svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(hr0, "class", "svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p3, "class", "description svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(hr1, "class", "svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p4, "class", "size svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p5, "class", "price svelte-1ab9iua");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(section, "class", "main-grid svelte-1ab9iua");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(h1, "class", "name svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p0, "class", "abv svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(hr0, "class", "svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "description svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(hr1, "class", "svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p1, "class", "size svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p2, "class", "price svelte-1p0ic3t");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(section, "class", "main-grid svelte-1p0ic3t");
 		},
 
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, section, anchor);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["mount_component"])(image, section, null);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p0, a);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, a);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a, h2);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(h2, t1);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t2);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p1);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p1, t3);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, h1);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(h1, t3);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t4);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p2);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t5);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t6);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t7);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t8);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p0, t5);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p0, t6);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p0, t7);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p0, t8);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t9);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, hr0);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t10);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p3);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p3, t11);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, div);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t11);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t12);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, hr1);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t13);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p4);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p4, t14);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p4, t15);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t16);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p5);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p5, t17);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p5, t18);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p1);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p1, t14);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p1, t15);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p1, t16);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, t17);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(section, p2);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t18);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p2, t19);
 			current = true;
 		},
 
@@ -2240,12 +2239,12 @@ function create_fragment(ctx) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t11, t11_value);
 			}
 
-			if ((!current || changed.item) && t14_value !== (t14_value = ctx.item.size + "")) {
-				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t14, t14_value);
+			if ((!current || changed.item) && t15_value !== (t15_value = ctx.item.size + "")) {
+				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t15, t15_value);
 			}
 
-			if ((!current || changed.item) && t18_value !== (t18_value = ctx.item.price + "")) {
-				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t18, t18_value);
+			if ((!current || changed.item) && t19_value !== (t19_value = ctx.item.price + "")) {
+				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t19, t19_value);
 			}
 		},
 
